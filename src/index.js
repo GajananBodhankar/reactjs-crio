@@ -4,8 +4,11 @@ import reportWebVitals from "./reportWebVitals";
 import App from "./counter.tsx";
 
 import ReactDOM from "react-dom/client";
+import Unmount from "./unmountComp.tsx";
+import Main from "./unmountComp.tsx";
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+// root.render(<App />);
+root.render(<Main />);
 
 // ******************************************************************
 // OR

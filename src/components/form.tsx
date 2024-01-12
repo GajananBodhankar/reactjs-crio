@@ -31,7 +31,6 @@ export default class Form extends Component<{}, IForm> {
           />
           <input type="submit" value="Submit" />
         </form>
-        {/* <button onClick={() => this.forceUpdate()}>update</button> */}
         <p>The Value is : {this.state.value}</p>
       </div>
     );

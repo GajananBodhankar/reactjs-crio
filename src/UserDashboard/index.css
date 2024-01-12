@@ -1,0 +1,15 @@
+.mainContainer {
+  height: 70vh;
+  width: 50vw;
+  border: 2px solid black;
+  margin: auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.buttons button {
+  margin: 0.5rem;
+  padding: 1rem;
+}
+img {
+  height: 60%;
+}

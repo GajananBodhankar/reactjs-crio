@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../App.css";
 interface Icounter {
   count: number;
 }
@@ -21,17 +21,13 @@ class Counter extends React.Component<{ diff: number }, Icounter> {
   };
   render() {
     return (
-      <div
-        style={{
-          justifyContent: "center",
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
+      <div className="mainContainer">
         <h1>{this.state.count}</h1>
-        <button onClick={this.increment}>+</button>
-        <button onClick={this.incByNum}>{this.props.diff}</button>
-        <button onClick={this.decrement}>-</button>
+        <div>
+          <button onClick={this.increment}>+ 1</button>
+          <button onClick={this.incByNum}>{this.props.diff}</button>
+          <button onClick={this.decrement}>- 1</button>
+        </div>
       </div>
     );
   }

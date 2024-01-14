@@ -7,10 +7,11 @@ import Form from "./components/form.tsx";
 import Parent from "./componentHeirarchy/index.tsx";
 import Index from "./lifecycle/index.tsx";
 import Dog from "./DogAssignment/Dog.tsx";
+import Router from "./NavigateClassComponent/Router.tsx";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(<Form />);
 // root.render(<Main />);
-root.render(<Dog />);
+root.render(<Router />);
 // ******************************************************************
 // OR
 

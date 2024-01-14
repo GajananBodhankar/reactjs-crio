@@ -3,12 +3,14 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import ReactDOM from "react-dom/client";
 import Form from "./components/form.tsx";
-import Index from "./UserDashboard/index.tsx";
+// import Index from "./UserDashboard/index.tsx";
+import Parent from "./componentHeirarchy/index.tsx";
+import Index from "./lifecycle/index.tsx";
+import Dog from "./DogAssignment/Dog.tsx";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(<Form />);
 // root.render(<Main />);
-root.render(<Index />);
-
+root.render(<Dog />);
 // ******************************************************************
 // OR
 

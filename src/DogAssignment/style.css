@@ -1,0 +1,12 @@
+.mainContainer {
+  padding: 5rem;
+  height: 100vh;
+}
+img {
+  height: 50vh;
+
+  margin-top: 20px;
+}
+button {
+  margin-top: 1rem;
+}

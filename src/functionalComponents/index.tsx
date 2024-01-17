@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function CustomUseState() {
+function customUseState() {
   let [count, setCount] = useState(0);
   let increment = () => {
     setCount(count + 1);
@@ -11,8 +11,8 @@ function CustomUseState() {
   return { count, setCount, increment, decrement };
 }
 
-function CustomHook() {
-  let { count, setCount, increment, decrement } = CustomUseState();
+function index() {
+  let { count, setCount, increment, decrement } = customUseState();
   return (
     <div>
       <h1>{count}</h1>
@@ -22,4 +22,4 @@ function CustomHook() {
   );
 }
 
-export default CustomHook;
+export default index;

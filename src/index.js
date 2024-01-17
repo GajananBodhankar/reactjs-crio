@@ -4,16 +4,14 @@ import reportWebVitals from "./reportWebVitals";
 import ReactDOM from "react-dom/client";
 import Form from "./components/form.tsx";
 // import Index from "./UserDashboard/index.tsx";
-import Parent from "./componentHeirarchy/index.tsx";
-import Index from "./lifecycle/index.tsx";
-import Dog from "./DogAssignment/Dog.tsx";
-import Router from "./NavigateClassComponent/Router.tsx";
-import CustomHook from "./functionalComponents/index.tsx";
+import Appoint from "./AppointmentBooking/appoint.tsx";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(<Form />);
 // root.render(<Main />);
 // root.render(<Router />);
-root.render(<CustomHook />);
+// root.render(<CustomHook />);
+
+root.render(<Appoint />);
 // ******************************************************************
 // OR
 

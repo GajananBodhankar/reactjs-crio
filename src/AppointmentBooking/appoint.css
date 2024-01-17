@@ -1,0 +1,15 @@
+.mainContainer {
+  border: 2px solid black;
+  width: calc(100vw - 100px);
+  margin: auto;
+  padding: 10px 10px;
+}
+.subDiv {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.contentDiv {
+  display: inline-flex;
+  flex-direction: column;
+}

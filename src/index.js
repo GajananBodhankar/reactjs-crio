@@ -5,13 +5,14 @@ import ReactDOM from "react-dom/client";
 import Form from "./components/form.tsx";
 // import Index from "./UserDashboard/index.tsx";
 import Appoint from "./AppointmentBooking/appoint.tsx";
+import App from "./App.tsx";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(<Form />);
 // root.render(<Main />);
 // root.render(<Router />);
 // root.render(<CustomHook />);
-
-root.render(<Appoint />);
+root.render(<App />);
+// root.render(<Appoint />);
 // ******************************************************************
 // OR
 

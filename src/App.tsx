@@ -5,7 +5,7 @@ function App() {
   let [data, setData] = useState([
     { id: "1", name: "Winter Soldier" },
     { id: "2", name: "Iron Man" },
-    { id: "b3dkdj2", name: "Black Widow" },
+    { id: "3", name: "Black Widow" },
     { id: 10, name: "max" },
     { id: 11, name: "john" },
   ]);

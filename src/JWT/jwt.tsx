@@ -1,5 +1,4 @@
 import React from "react";
-import Main from "./listandkeys/Main.tsx";
 import { jwtDecode } from "jwt-decode";
 async function getData() {
   let data = { username: "gajananbodhankar", password: "123456" };
@@ -28,15 +27,14 @@ async function getData() {
   }
 }
 
-function App() {
+function Jwt() {
   return (
     <>
-      <Main />
       <button onClick={getData}>Call</button>
     </>
   );
 }
 
-export default App;
+export default Jwt;
 
 // http://13.201.64.128:8082/api/v1/auth/login

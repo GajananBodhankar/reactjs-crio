@@ -1,29 +1,14 @@
-import React, { useState } from "react";
-import Superhero from "./listandkeys/superhero.tsx";
+import React from "react";
+import Main from "./listandkeys/Main.tsx";
+
+async function getData(){
+  
+}
 
 function App() {
-  let [data, setData] = useState([
-    { id: "1", name: "Winter Soldier" },
-    { id: "2", name: "Iron Man" },
-    { id: "3", name: "Black Widow" },
-    { id: 10, name: "max" },
-    { id: 11, name: "john" },
-  ]);
-  return (
-    <div>
-      {data.map((i, j) => (
-        <Superhero name={i.name} key={i.id} />
-      ))}
-      <button
-        onClick={() => {
-          setData([...data.sort(() => Math.random() - 0.5)]);
-        }}
-      >
-        {" "}
-        Shuffle
-      </button>
-    </div>
-  );
+  return <Main />;
 }
 
 export default App;
+
+// http://13.201.64.128:8082/api/v1/auth/login

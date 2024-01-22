@@ -1,0 +1,13 @@
+.item {
+  flex-grow: 1 !important;
+  /* If you want flex-grow to work, add below properties */
+  /* flex-basis: auto !important; */
+  /* max-width: none !important; */
+}
+
+@media screen and (min-width: 1200px) {
+  .item {
+    flex-basis: auto !important;
+    max-width: none !important;
+  }
+}

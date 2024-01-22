@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Main from "./listandkeys/Main.tsx";
-
+import EffectVSlayout from "./hooks/effectVSlayout.tsx";
 function App() {
-  return <Main />;
+  let un = () => {
+    console.log("unmounted");
+  };
+  const [bool, setBool] = useState(false);
+  useEffect(() => {
+    console.log(bool);
+    return un;
+  }, [bool]);
+  return <EffectVSlayout />;
 }
-
 export default App;
-
-// http://13.201.64.128:8082/api/v1/auth/login

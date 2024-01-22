@@ -3,7 +3,7 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 function EffectVSlayout() {
   const [count, SetCount] = useState(0);
   function unmount() {
-    console.log("unmounted");
+    console.log("unmounted useEffect");
   }
   //   Here, count is updated, screen is painted and the useEffect is called
   useEffect(() => {

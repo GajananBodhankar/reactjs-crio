@@ -23,9 +23,7 @@ function VideosComponent() {
       }, 1000);
     }
     return () => {
-      console.log("before", timer);
       clearTimeout(timer);
-      console.log("Timer", timer);
     };
   }, [text]);
   function handleChange(e) {

@@ -6,16 +6,31 @@ import "./video.css";
 function VideosComponent() {
   let [data, setData] = useState<Array<any>>();
   let [text, setText] = useState<String>();
-  async function fetchApiData() {
-    let response = await axios.get(
-      "https://content-xflix-backend.azurewebsites.net/v1/videos"
-    );
+  async function fetchApiData(url) {
+    let response = await axios.get(url);
+    console.log("hi", url, text?.length);
     setData(response.data.videos);
   }
   useEffect(() => {
-    fetchApiData();
-  }, []);
-  function handleChange() {}
+    let timer;
+    if (!text) {
+      fetchApiData("https://content-xflix-backend.azurewebsites.net/v1/videos");
+    } else {
+      timer = setTimeout(() => {
+        fetchApiData(
+          `https://content-xflix-backend.azurewebsites.net/v1/videos?title=${text}`
+        );
+      }, 1000);
+    }
+    return () => {
+      console.log("before", timer);
+      clearTimeout(timer);
+      console.log("Timer", timer);
+    };
+  }, [text]);
+  function handleChange(e) {
+    setText(e.target.value);
+  }
   return (
     <Box
       component="div"
@@ -46,6 +61,7 @@ function VideosComponent() {
                   genre={i.genre}
                   title={i.title}
                   release={i.releaseDate}
+                  videoLink={i.videoLink}
                 />
               </Grid>
             );

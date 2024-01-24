@@ -1,14 +1,7 @@
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardMedia,
-  Grid,
-  Typography,
-} from "@mui/material";
+import { Card, CardContent, CardMedia, Link, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 
-function CardComponent({ image, genre, title, release }) {
+function CardComponent({ image, genre, title, release, videoLink }) {
   return (
     <Card>
       <CardMedia
@@ -19,8 +12,15 @@ function CardComponent({ image, genre, title, release }) {
       />
       <CardContent>
         <Typography variant="inherit">{genre}</Typography>
-        <Typography variant="caption">{title}</Typography>
-        <Typography variant="body2">{release}</Typography>
+        <Typography variant="body2">{title}</Typography>
+        <Typography variant="caption">{release}</Typography>
+        <Link
+          href={`https://www.${videoLink}`}
+          target="_blank"
+          display={"block"}
+        >
+          Watch
+        </Link>
       </CardContent>
     </Card>
   );

@@ -1,8 +1,19 @@
-import { Box, Grid, TextField } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  InputAdornment,
+  OutlinedInput,
+  Rating,
+  TextField,
+  Typography,
+} from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import CardComponent from "./cardComponent.tsx";
 import "./video.css";
+// @mui/icons-material/Search
+import SearchIcon from "@mui/icons-material/Search";
 function VideosComponent() {
   let [data, setData] = useState<Array<any>>();
   let [text, setText] = useState<String>();
@@ -36,6 +47,20 @@ function VideosComponent() {
       flexDirection={"column"}
       padding={"5px 15px"}
     >
+      <Rating value={5} readOnly />
+      <Button fullWidth variant="contained">
+        hello
+      </Button>
+      <OutlinedInput
+        placeholder="Search"
+        fullWidth
+        endAdornment={
+          <InputAdornment position="end">
+            <SearchIcon style={{ color: "red" }} />
+          </InputAdornment>
+        }
+      />
+
       <TextField
         value={text}
         onChange={handleChange}

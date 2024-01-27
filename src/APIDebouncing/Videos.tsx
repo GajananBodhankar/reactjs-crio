@@ -5,6 +5,7 @@ import {
   InputAdornment,
   OutlinedInput,
   Rating,
+  Stack,
   TextField,
   Typography,
 } from "@mui/material";
@@ -22,6 +23,11 @@ function VideosComponent() {
     console.log("hi", url, text?.length);
     setData(response.data.videos);
   }
+  useEffect(() => {
+    let x = new URL(window.location.href);
+    let u = new URLSearchParams(x.href);
+    u.forEach((i,j) => console.log(i,j,'hi'));
+  });
   useEffect(() => {
     let timer;
     if (!text) {
@@ -60,7 +66,16 @@ function VideosComponent() {
           </InputAdornment>
         }
       />
-
+      <Stack sx={{ backgroundColor: "red" }}>hello</Stack>
+      <OutlinedInput
+        placeholder="Search for items/categories"
+        className="output"
+        endAdornment={
+          <InputAdornment position="end">
+            <SearchIcon sx={{ color: "#00a278" }} />
+          </InputAdornment>
+        }
+      />
       <TextField
         value={text}
         onChange={handleChange}
@@ -68,7 +83,7 @@ function VideosComponent() {
         label="Search"
         className="textField"
       />
-      <Grid container marginBottom={10} >
+      <Grid container marginBottom={10} padding={1} flexDirection={"column"}>
         {data?.map((i, j) => {
           if (j > 7) {
             return (

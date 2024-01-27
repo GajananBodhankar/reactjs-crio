@@ -8,11 +8,13 @@
     flex-basis: 20% !important;
   }
 }
-
+.output {
+  width: 50% !important;
+  align-self: center;
+}
 .textField {
   margin-bottom: 20px !important;
   align-self: flex-end !important;
 }
-@media screen and (max-width:494px) and (min-width:300px) {
-  
+@media screen and (max-width: 494px) and (min-width: 300px) {
 }

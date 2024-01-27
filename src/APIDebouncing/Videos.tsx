@@ -68,7 +68,7 @@ function VideosComponent() {
         label="Search"
         className="textField"
       />
-      <Grid container gap={2}>
+      <Grid container marginBottom={10} >
         {data?.map((i, j) => {
           if (j > 7) {
             return (

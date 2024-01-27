@@ -1,4 +1,4 @@
-import { Card, CardContent, CardMedia, Link, Typography } from "@mui/material";
+import { Button, Card, CardContent, CardMedia, CircularProgress, Link, Rating, Stack, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 
 function CardComponent({ image, genre, title, release, videoLink }) {
@@ -8,11 +8,19 @@ function CardComponent({ image, genre, title, release, videoLink }) {
         component="img"
         image={image}
         alt="Image not found"
-        height={140}
+        sx={{
+          "@media screen and (min-width:600px)": {
+            height: 200,
+          },
+        }}
       />
+      <Rating   />
+      <Button type="button"></Button>
       <CardContent>
         <Typography variant="inherit">{genre}</Typography>
-        <Typography variant="body2">{title}</Typography>
+        <Typography variant="subtitle1">{title}</Typography>
+        <CircularProgress  />
+        <Stack flexDirection={"column"}></Stack>
         <Typography variant="caption">{release}</Typography>
         <Link
           href={`https://www.${videoLink}`}

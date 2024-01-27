@@ -13,3 +13,6 @@
   margin-bottom: 20px !important;
   align-self: flex-end !important;
 }
+@media screen and (max-width:494px) and (min-width:300px) {
+  
+}

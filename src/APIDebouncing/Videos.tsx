@@ -1,4 +1,5 @@
 import {
+  Avatar,
   Box,
   Button,
   Grid,
@@ -26,7 +27,7 @@ function VideosComponent() {
   useEffect(() => {
     let x = new URL(window.location.href);
     let u = new URLSearchParams(x.href);
-    u.forEach((i,j) => console.log(i,j,'hi'));
+    u.forEach((i, j) => console.log(i, j, "hi"));
   });
   useEffect(() => {
     let timer;
@@ -53,6 +54,8 @@ function VideosComponent() {
       flexDirection={"column"}
       padding={"5px 15px"}
     >
+      <img src="./1159072.png" height={100} alt="image not found" />
+
       <Rating value={5} readOnly />
       <Button fullWidth variant="contained">
         hello

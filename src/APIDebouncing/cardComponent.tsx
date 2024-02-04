@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Card,
   CardContent,
@@ -29,7 +30,7 @@ function CardComponent({ image, genre, title, release, videoLink }) {
         }}
       />
       <Rating />
-      
+      <Box display={"flex"}></Box>
       <Button type="button"></Button>
       <CardContent>
         <Typography variant="inherit">{genre}</Typography>

@@ -1,24 +1,26 @@
-import { Button } from "@mui/material";
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import MyListcallback from "./MyListcallback.tsx";
-
+import React, { useCallback, useEffect, useState } from "react";
+import SquareComponent from "./SquareComponent.tsx";
 function UseCallback() {
+  const squareRef = React.useRef(null);
+  const [count, setCount] = useState(0);
   const [bool, setBool] = useState(false);
-  const [input, setInput] = useState(0);
-  let ref = useRef<any>();
   let handler = useCallback(() => {
-    setBool(!bool);
-  }, [input]);
+    setCount(count + 1);
+  }, [count]);
+  // let handler = function () {
+  //   setCount(count + 1);
+  // };
   useEffect(() => {
-    console.log(ref.current === handler);
-    ref.current = handler;
+    console.log(squareRef.current == handler);
+    squareRef.current = handler;
   });
   return (
-    <div>
-      <Button onClick={() => setBool(!bool)}>Click</Button>
-      <MyListcallback val={input} handler={handler} ref={ref} />
-    </div>
+    <>
+      <button onClick={() => setBool(!bool)}>
+        Change state of parent component
+      </button>
+      <SquareComponent val={count} handler={handler} ref={squareRef} />
+    </>
   );
 }
-
 export default UseCallback;

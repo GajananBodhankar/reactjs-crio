@@ -61,7 +61,10 @@ function CardComponent() {
     //     Click
     //   </Button>
     // </Box>
-    <UseMemo />
+
+    // <UseMemo />
+
+    <UseCallback />
   );
 }
 

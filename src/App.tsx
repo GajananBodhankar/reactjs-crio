@@ -12,6 +12,10 @@ import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
 import UseCallback from "./hooks/UseCallback.tsx";
 import UseMemo from "./hooks/UseMemo.tsx";
+import CoinApp from "./hooks/CoinApp.tsx";
+import Parent from "./UseOutletContext/Parent.tsx";
+import Child from "./UseOutletContext/ChildOne.tsx";
+import Router from "./UseOutletContext/Router.tsx";
 function CardComponent() {
   const [addresses, setAddresses] = useState({ all: [], selected: "" });
   return (
@@ -64,7 +68,11 @@ function CardComponent() {
 
     // <UseMemo />
 
-    <UseCallback />
+    // <UseCallback />
+
+    // <Parent />
+    // <CoinApp />
+    <Router />
   );
 }
 

@@ -34,7 +34,7 @@ function check(setSize) {
 }
 
 function SwiperComponent() {
-  const [data, setData] = useState<Array<Object>>();
+  const [data, setData] = useState<Array<any>>([]);
   const [size, setSize] = useState(70);
   const [showAll, setShowAll] = useState<boolean>(false);
   useEffect(() => {

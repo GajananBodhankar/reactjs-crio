@@ -18,6 +18,8 @@ import Child from "./UseOutletContext/ChildOne.tsx";
 import Router from "./UseOutletContext/Router.tsx";
 import State from "./LiftingUpState/State.tsx";
 import Main from "./listandkeys/Main.tsx";
+import SwiperComponent from "./Swiper/Swiper.tsx";
+import { StyledEngineProvider } from "@mui/styled-engine-sc";
 function CardComponent() {
   const [addresses, setAddresses] = useState({ all: [], selected: "" });
   return (
@@ -76,7 +78,10 @@ function CardComponent() {
     // <CoinApp />
     // <Router />
     // <State />
-    <Main />
+    // <Main />
+    <StyledEngineProvider injectFirst>
+      <SwiperComponent />
+    </StyledEngineProvider>
   );
 }
 

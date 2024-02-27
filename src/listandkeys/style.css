@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: max-content;
+  gap: 20px;
+  height: 100vh;
+}
+
+.container > div {
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 10px;
+}
+button {
+  background-color: rgb(85, 147, 255);
+  border: 0;
+  padding: 1rem;
+  color: white;
+  font-size: larger;
+  border-radius: 10px;
+}

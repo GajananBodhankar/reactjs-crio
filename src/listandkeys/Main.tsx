@@ -1,26 +1,23 @@
 import React, { useState } from "react";
-import Superhero from "./superhero.tsx";
+import Names from "./Names.tsx";
+import "./style.css";
 function Main() {
   let [data, setData] = useState([
-    { id: "1", name: "Winter Soldier" },
-    { id: "2", name: "Iron Man" },
-    { id: "3", name: "Black Widow" },
-    { id: 10, name: "max" },
-    { id: 11, name: "john" },
+    { id: "501", name: "Emily" },
+    { id: "502", name: "James" },
+    { id: "503", name: "Sophia" },
+    { id: "504", name: "Alexander" },
+    { id: "505", name: "Bruce" },
   ]);
+  function handleShuffle() {
+    setData([...data.sort(() => Math.random() - 0.5)]);
+  }
   return (
-    <div>
-      {data.map((i, j) => (
-        <Superhero name={i.name} key={i.id} />
+    <div className="container">
+      {data.map((item, index) => (
+        <Names name={item.name} key={index} />
       ))}
-      <button
-        onClick={() => {
-          setData([...data.sort(() => Math.random() - 0.5)]);
-        }}
-      >
-        {" "}
-        Shuffle
-      </button>
+      <button onClick={handleShuffle}>Shuffle</button>
     </div>
   );
 }

@@ -2896,32 +2896,97 @@ let response = [
   },
 ];
 
-let arr = response.filter((i, j) => j < 50);
-let coinsArr = coins.filter((i, j) => j < 50);
-console.log(
-  arr.filter((i, j) =>
-    coins.find(
-      (element) =>
-        element.name == i.name &&
-        Number(element.priceUsd).toFixed(2) != Number(i.priceUsd).toFixed(2)
-    )
-  ).length
-);
+// let arr = response.filter((i, j) => j < 50);
+// let coinsArr = coins.filter((i, j) => j < 50);
+// console.log(
+//   arr.filter((i, j) =>
+//     coins.find(
+//       (element) =>
+//         element.name == i.name &&
+//         Number(element.priceUsd).toFixed(2) != Number(i.priceUsd).toFixed(2)
+//     )
+//   ).length
+// );
 
-arr.forEach((i) => {
-  coinsArr.forEach((j) => {
-    if (
-      i.name == j.name &&
-      Number(i.priceUsd).toFixed(2) != Number(j.priceUsd).toFixed(2)
-    ) {
-      console.log(
-        i.name,
-        Number(i.priceUsd).toFixed(2),
-        Number(j.priceUsd).toFixed(2)
-      );
-    }
-  });
-});
-let num = 50077.876662541074575;
+// arr.forEach((i) => {
+//   coinsArr.forEach((j) => {
+//     if (
+//       i.name == j.name &&
+//       Number(i.priceUsd).toFixed(2) != Number(j.priceUsd).toFixed(2)
+//     ) {
+//       console.log(
+//         i.name,
+//         Number(i.priceUsd).toFixed(2),
+//         Number(j.priceUsd).toFixed(2)
+//       );
+//     }
+//   });
+// });
+// let num = 50077.876662541074575;
 
-console.log(num.toPrecision(7), num.toFixed(2));
+// console.log(num.toPrecision(7), num.toFixed(2));
+let arr = [
+  {
+    id: "1",
+    name: "Winter Soldier",
+    power: "Super Strength",
+    team: "Avengers",
+  },
+  { id: "2", name: "Iron Man", power: "Genius Inventor", team: "Avengers" },
+  { id: "3", name: "Black Widow", power: "Master Spy", team: "Avengers" },
+  { id: "4", name: "Thor", power: "God of Thunder", team: "Avengers" },
+  {
+    id: "5",
+    name: "Captain America",
+    power: "Super Soldier",
+    team: "Avengers",
+  },
+  {
+    id: "1",
+    name: "Winter Soldier",
+    power: "Super Strength",
+    team: "Avengers",
+  },
+  { id: "2", name: "Iron Man", power: "Genius Inventor", team: "Avengers" },
+  { id: "3", name: "Black Widow", power: "Master Spy", team: "Avengers" },
+  { id: "4", name: "Thor", power: "God of Thunder", team: "Avengers" },
+  {
+    id: "5",
+    name: "Captain America",
+    power: "Super Soldier",
+    team: "Avengers",
+  },
+  {
+    id: "1",
+    name: "Winter Soldier",
+    power: "Super Strength",
+    team: "Avengers",
+  },
+  { id: "2", name: "Iron Man", power: "Genius Inventor", team: "Avengers" },
+  { id: "3", name: "Black Widow", power: "Master Spy", team: "Avengers" },
+  { id: "4", name: "Thor", power: "God of Thunder", team: "Avengers" },
+  {
+    id: "5",
+    name: "Captain America",
+    power: "Super Soldier",
+    team: "Avengers",
+  },
+  {
+    id: "1",
+    name: "Winter Soldier",
+    power: "Super Strength",
+    team: "Avengers",
+  },
+  { id: "2", name: "Iron Man", power: "Genius Inventor", team: "Avengers" },
+  { id: "3", name: "Black Widow", power: "Master Spy", team: "Avengers" },
+  { id: "4", name: "Thor", power: "God of Thunder", team: "Avengers" },
+  {
+    id: "5",
+    name: "Captain America",
+    power: "Super Soldier",
+    team: "Avengers",
+  },
+];
+
+// console.log(arr.sort(() => Math.random() - 0.5));
+console.log(Math.random()-0.5)

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Superhero(props) {
+function Names(props: any) {
   let [checked, setChecked] = useState(false);
   let handleChange = (e) => {
     setChecked(e.target.checked);
@@ -8,9 +8,9 @@ function Superhero(props) {
   return (
     <div>
       {props.name}
-      <input type="checkbox" onChange={handleChange} />
+      <input type="checkbox" onChange={handleChange} checked={checked} />
     </div>
   );
 }
 
-export default Superhero;
+export default Names;

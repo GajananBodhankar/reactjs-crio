@@ -17,6 +17,7 @@ import Parent from "./UseOutletContext/Parent.tsx";
 import Child from "./UseOutletContext/ChildOne.tsx";
 import Router from "./UseOutletContext/Router.tsx";
 import State from "./LiftingUpState/State.tsx";
+import Main from "./listandkeys/Main.tsx";
 function CardComponent() {
   const [addresses, setAddresses] = useState({ all: [], selected: "" });
   return (
@@ -74,7 +75,8 @@ function CardComponent() {
     // <Parent />
     // <CoinApp />
     // <Router />
-    <State />
+    // <State />
+    <Main />
   );
 }
 

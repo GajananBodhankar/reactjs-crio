@@ -13,13 +13,13 @@ import React, { useState } from "react";
 import UseCallback from "./hooks/UseCallback.tsx";
 import UseMemo from "./hooks/UseMemo.tsx";
 import CoinApp from "./hooks/CoinApp.tsx";
-import Parent from "./UseOutletContext/Parent.tsx";
 import Child from "./UseOutletContext/ChildOne.tsx";
 import Router from "./UseOutletContext/Router.tsx";
 import State from "./LiftingUpState/State.tsx";
 import Main from "./listandkeys/Main.tsx";
 import SwiperComponent from "./Swiper/Swiper.tsx";
 import { StyledEngineProvider } from "@mui/styled-engine-sc";
+import Parent from "./Rerender/Parent.tsx";
 function CardComponent() {
   const [addresses, setAddresses] = useState({ all: [], selected: "" });
   return (
@@ -79,9 +79,10 @@ function CardComponent() {
     // <Router />
     // <State />
     // <Main />
-    <StyledEngineProvider injectFirst>
-      <SwiperComponent />
-    </StyledEngineProvider>
+    // <StyledEngineProvider injectFirst>
+    //   <SwiperComponent />
+    // </StyledEngineProvider>
+    <Parent />
   );
 }
 

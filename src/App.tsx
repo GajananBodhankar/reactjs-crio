@@ -1,25 +1,8 @@
 import React, { useEffect, useRef } from "react";
+import ParentComponent from "./forwardRef/ParentComponent.tsx";
 
 function App() {
-  const textref = useRef<HTMLInputElement>(null);
-  const count = useRef(0);
-  useEffect(() => {
-    console.log("Rendered");
-  });
-  return (
-    <div>
-      <button
-        onClick={() => {
-          count.current = count.current + 1;
-          console.log(count.current);
-        }}
-      >
-        Increment
-      </button>
-      <input type="text" ref={textref} />
-      <button onClick={() => textref.current?.focus()}>Focus</button>
-    </div>
-  );
+  return <ParentComponent />;
 }
 
 export default App;

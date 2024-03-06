@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from "react";
-import ParentComponent from "./forwardRef/ParentComponent.tsx";
+import React from "react";
+import ClassComponent from "./ClassVSfunction/ClassComponent.tsx";
 
 function App() {
-  return <ParentComponent />;
+  return <ClassComponent />;
 }
 
 export default App;

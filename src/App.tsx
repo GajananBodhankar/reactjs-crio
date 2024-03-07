@@ -1,9 +1,11 @@
-import React from "react";
-import ClassComponent from "./ClassVSfunction/ClassComponent.tsx";
-import FunctionalComponent from "./ClassVSfunction/FunctionalComponent.tsx";
+import React, { useEffect, useState } from "react";
+import Memo from "./ProDeveloper/Memo.tsx";
+import UseReducer from "./hooks/UseReducer.tsx";
+
+
 
 function App() {
-  return <FunctionalComponent />;
+  return <UseReducer />;
 }
 
 export default App;

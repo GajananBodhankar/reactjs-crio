@@ -3,10 +3,11 @@ import React, { useEffect, useState } from "react";
 function BatchingUseEffect() {
   const [num, setNum] = useState(0);
   useEffect(() => {
-    console.log('effect')
+    console.log("effect");
     let val = setInterval(() => {
-    //   setNum((prev) => prev + 1);
+      setNum((prev) => prev + 1);
     }, 1000);
+
     return () => {
       clearInterval(val);
     };

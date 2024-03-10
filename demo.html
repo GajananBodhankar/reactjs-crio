@@ -5,33 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .maincontainer {
+      .container {
         height: 400px;
         width: 400px;
-        margin: auto;
         border: 1px solid black;
-        position: relative;
+        margin: auto;
+        position: absolute;
       }
       .item {
-        height: 50px;
-        width: 50px;
-        border: 4px solid red;
-        position: absolute;
-        top: 10px;
-        left: 0;
+        background-color: red;
+        position: fixed;
+        top: 20px;
+      }
+      body {
+        height: 200vh;
       }
     </style>
   </head>
   <body>
-    <div class="maincontainer">
+    <div class="container">
       <div class="item">
-        hello i am gajanana
-        <p style="display: none">lorem10</p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur,
+        omnis.
       </div>
     </div>
-    <script>
-      let doc = document.querySelector(".item");
-      console.log(doc.textContent);
-    </script>
   </body>
 </html>

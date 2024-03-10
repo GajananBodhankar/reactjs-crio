@@ -1,12 +1,7 @@
 import React from "react";
-import Index from "./ControlledVSuncontrolled/index.tsx";
 
 function App() {
-  return (
-    <div>
-      <Index />
-    </div>
-  );
+  return <div>hello I am a div</div>;
 }
 
 export default App;

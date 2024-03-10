@@ -11,7 +11,13 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(<Main />);
 // root.render(<Router />);
 // root.render(<CustomHook />);
+let element = React.createElement(
+  "div",
+  { className: "mainContainer" },
+  React.createElement("p", { className: "mainContainer" }, "I am a p tag")
+);
 root.render(<App />);
+// root.render(element);
 // root.render(<Appoint />);
 // ******************************************************************
 // OR

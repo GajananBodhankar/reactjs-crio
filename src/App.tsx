@@ -1,6 +1,8 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import Router from "./UseOutletContext/Router.tsx";
+import Index from "./HOC/Index.tsx";
 import HocComponent from "./HOC/HocComponent.tsx";
+import ComponentOne from "./HOC/ComponentOne.tsx";
+import ComponentTwo from "./HOC/ComponentTwo.tsx";
 
 function App() {
   const [val, setVal] = useState(0);
@@ -13,7 +15,14 @@ function App() {
     console.log(childRef.current == handleChange);
     childRef.current = handleChange;
   });
-  return <HocComponent />;
+  let One = HocComponent(ComponentOne);
+  let Two = HocComponent(ComponentTwo);
+  return (
+    <>
+      <One />
+      <Two />
+    </>
+  );
 }
 
 export default App;

@@ -6,18 +6,34 @@
     <title>Document</title>
     <style>
       .container {
-        display: inline-flex;
-      }
-      .container > span {
         height: 300px;
-        border: 1px solid black;
+        width: 300px;
+        border: 10px solid black;
+        margin: auto;
+        display: flex;
+        position: relative;
+      }
+      p:first-child {
+        height: 40px;
+        width: 40px;
+        border: 1px solid red;
+        margin: 0;
+        position: absolute;
+      }
+      p:nth-child(2) {
+        height: 40px;
+        width: 40px;
+        border: 1px solid red;
+        margin: 0;
+        position: relative;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <p>hello</p>
-      <div>hiii</div>
+      <p>hiii</p>
+      <button>Click</button>
     </div>
   </body>
   <script type="module" src="./demo.js"></script>

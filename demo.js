@@ -1,8 +1,8 @@
-document.querySelector("p").addEventListener("click", (e) => {
-  alert("clicked p");
-  e.stopPropagation();
-});
-
-document.querySelector(".container").addEventListener("click", () => {
-  alert("clicked on conatiner");
-});
+function check() {
+  this.age = 22;
+  return function () {
+    console.log("object");
+  };
+}
+let val = new check();
+console.log(val);

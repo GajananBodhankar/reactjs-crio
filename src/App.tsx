@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import Router from "./UseOutletContext/Router.tsx";
+import HocComponent from "./HOC/HocComponent.tsx";
 
 function App() {
   const [val, setVal] = useState(0);
@@ -12,7 +13,7 @@ function App() {
     console.log(childRef.current == handleChange);
     childRef.current = handleChange;
   });
-  return <Router />;
+  return <HocComponent />;
 }
 
 export default App;

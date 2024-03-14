@@ -5,7 +5,7 @@ interface Idata {
   setCount: (arg0: number) => void;
 }
 function ChildOne() {
-  const [count, setCount] = useOutletContext<Idata>();
+  const { count, setCount } = useOutletContext<Idata>();
   return (
     <div>
       I am child

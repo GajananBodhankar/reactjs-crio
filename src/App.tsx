@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import Router from "./UseOutletContext/Router.tsx";
 
 function App() {
   const [val, setVal] = useState(0);
@@ -11,15 +12,7 @@ function App() {
     console.log(childRef.current == handleChange);
     childRef.current = handleChange;
   });
-  return (
-    <div>
-      <button ref={childRef} onClick={handleChange}>
-        Change state
-      </button>
-      <p>The value is {val}</p>
-      <button onClick={() => setVal(val + 1)}>Increment</button>
-    </div>
-  );
+  return <Router />;
 }
 
 export default App;

@@ -1,26 +1,44 @@
-function quick(start, end, arr) {
+function merge(start, end, arr) {
+  let mid = Math.floor((start + end) / 2);
   if (start < end) {
-    let j = partition(start, end, arr);
-    quick(start, j - 1, arr);
-    quick(j + 1, end, arr);
+    merge(start, mid, arr);
+    merge(mid + 1, end, arr);
+    mergeSort(start, mid, end, arr);
   }
-  return arr;
+  console.log(arr);
 }
 
-function partition(start, end, arr) {
-  let j = start - 1,
-    pivot = arr[end];
-  for (let i = start; i < end; i++) {
-    if (arr[i] < pivot) {
-      j++;
-      tem = arr[i];
-      arr[i] = arr[j];
-      arr[j] = tem;
+function mergeSort(start, mid, end, arr) {
+  let low = start,
+    high = end,
+    i = start,
+    secondStart = mid + 1,
+    temp = [];
+  while (low <= mid && secondStart <= high) {
+    if (arr[low] <= arr[secondStart]) {
+      temp[i] = arr[low];
+      low++;
+    } else if (arr[secondStart] <= arr[low]) {
+      temp[i] = arr[secondStart];
+      secondStart++;
+    }
+    i++;
+  }
+  if (low > mid) {
+    for (let k = secondStart; k <= high; k++) {
+      temp[i] = arr[k];
+      i++;
     }
   }
-  temp = arr[j + 1];
-  arr[j + 1] = arr[end];
-  arr[end] = temp;
-  return j + 1;
+  if (secondStart > high) {
+    for (let k = low; k <= mid; k++) {
+      temp[i] = arr[k];
+      i++;
+    }
+  }
+  for (let k = start; k <= end; k++) {
+    arr[k] = temp[k];
+  }
 }
-console.log(quick(0, 4, [5, 4, 3, 2, 1]));
+
+merge(0, 4, [5, 4, 3, 2, 1]);

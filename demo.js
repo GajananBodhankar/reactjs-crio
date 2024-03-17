@@ -1,14 +1,13 @@
-let s = "A man, a plan, a canal: Panama";
+const car = {
+  name: "BMW",
+  power: "2000 BHP",
+  color: "black",
+};
 
-// [^...] is a negated character set, which means it matches any character not included within the brackets.
+let vehicle = {
+  wheels: 4,
+};
 
-function reverse(s) {
-  s = s.replace(/[^a-zA-Z0-9]/g, "");
-  for (let i in s) {
-    if (s[i].toLowerCase() != s[s.length - i - 1].toLowerCase()) {
-      return false;
-    }
-  }
-  return true;
-}
-console.log(reverse(s));
+Object.setPrototypeOf(vehicle, car);
+
+console.log(car.wheels);

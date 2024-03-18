@@ -7,7 +7,7 @@
     <style>
       .container {
         height: 500px;
-        width: 200px;
+        width: 500px;
         margin: auto;
         border: 1px solid black;
         display: flex;
@@ -41,27 +41,17 @@
   </head>
   <body>
     <div class="container">
-      <div class="red" style="visibility: visible"></div>
-      <div class="yellow" style="visibility: hidden"></div>
-      <div class="green" style="visibility: hidden"></div>
+      <form action="">
+        <label for="name">Enter name :</label>
+        <input type="text" id="name" />
+      </form>
     </div>
   </body>
   <script>
-    let red = document.querySelector(".red");
-    let yellow = document.querySelector(".yellow");
-    let green = document.querySelector(".green");
-    setInterval(() => {
-      if (red.style.visibility == "visible") {
-        red.style.visibility = "hidden";
-        yellow.style.visibility = "visible";
-        setTimeout(() => {
-          yellow.style.visibility = "hidden";
-          green.style.visibility = "visible";
-        }, 2000);
-      } else {
-        green.style.visibility = "hidden";
-        red.style.visibility = "visible";
-      }
-    }, 20000);
+    let form = document.querySelector("form");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      console.log(e.target.elements['name'].value);
+    });
   </script>
 </html>

@@ -6,7 +6,7 @@ function App() {
   const refer = useRef<HTMLButtonElement>(null);
   const handleChange = useCallback(() => setVal((prev) => prev + 1), [val]);
   useEffect(() => {
-    console.log(refer.current == handleChange);
+    console.log("check reference", refer.current == handleChange);
     refer.current = handleChange;
   });
   return (

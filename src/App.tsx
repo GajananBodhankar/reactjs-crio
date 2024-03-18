@@ -7,6 +7,26 @@ import Calci from "./Calculator/Calci.tsx";
 import { StyledEngineProvider } from "@mui/material";
 import Wrapper from "./HOC/Wrapper.tsx";
 
+interface Ireducer {
+  name: string;
+  age: number;
+}
+
+interface Idata {
+  data: Ireducer[];
+}
+const data: Idata = {
+  data: [],
+};
+
+function ReducerFun(state,action){
+  switch(action.type){
+    case 'push':{
+      return [...state,action.payload]
+    }
+  }
+}
+
 function App() {
   return (
     <StyledEngineProvider injectFirst>

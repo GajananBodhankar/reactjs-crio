@@ -1,13 +1,6 @@
-const car = {
-  name: "BMW",
-  power: "2000 BHP",
-  color: "black",
+function One() {}
+One.prototype.show = function () {
+  console.log("hello");
 };
 
-let vehicle = {
-  wheels: 4,
-};
-
-Object.setPrototypeOf(vehicle, car);
-
-console.log(car.wheels);
+One.prototype.show();

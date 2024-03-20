@@ -11,7 +11,6 @@ function Index() {
       );
       if (result.status === 200) {
         setBool(true);
-        console.log(result.data);
       }
     } catch (error) {
       setBool(false);

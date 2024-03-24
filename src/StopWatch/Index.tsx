@@ -3,7 +3,18 @@ import React, { useEffect, useReducer, useRef, useState } from "react";
 function Index() {
   const [value, setValue] = useState(0);
   const [hr, setHr] = useState(0);
+  const [isRunnning, setIsRunning] = useState(false);
   let int = useRef<any>(null);
+  useEffect(() => {
+    if (isRunnning) {
+      int.current = setInterval(() => {
+        setValue((prev) => prev + 1);
+      }, 1000);
+    }
+    return () => {
+      clearInterval(int.current);
+    };
+  }, [isRunnning]);
   useEffect(() => {
     if (value + 1 >= 60) {
       setValue(0);
@@ -19,21 +30,17 @@ function Index() {
         margin: "auto",
         display: "flex",
         flexDirection: "column",
-        alignItems:'center'
+        alignItems: "center",
       }}
     >
       {hr.toString().length < 2 ? `0${hr}` : `${hr}`}:
       {value.toString().length < 2 ? `0${value}` : value}
       <button
         onClick={() => {
-          if (int.current == null) {
-            int.current = setInterval(() => {
-              setValue((prev) => prev + 1);
-            }, 1000);
-          }
+          setIsRunning((prev) => !prev);
         }}
       >
-        Start
+        {isRunnning ? "stop" : "start"}
       </button>
       <button
         onClick={() => {
@@ -44,7 +51,6 @@ function Index() {
       >
         Reset
       </button>
-      <button onClick={() => clearInterval(int?.current)}>Stop</button>
     </div>
   );
 }

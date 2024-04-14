@@ -5,10 +5,12 @@ function SearchFilter() {
   const [data, setData] = useState([]);
   const [searchItem, setSearchItem] = useState("");
   const [resultData, setResultData] = useState([]);
-  async function apiCall(api) {
+  async function apiCall() {
     if (searchItem) {
       try {
-        let result = await axios.get(api);
+        let result = await axios.get(
+          `https://dummyjson.com/users/search?q=${searchItem}`
+        );
         console.log(searchItem);
         if (result.data) {
           setResultData(result.data.users);
@@ -22,13 +24,7 @@ function SearchFilter() {
   }
   useEffect(() => {
     let timer: string | number | NodeJS.Timeout | undefined;
-    timer = setTimeout(
-      () =>
-        searchItem
-          ? apiCall(`https://dummyjson.com/users/search?q=${searchItem}`)
-          : setResultData([]),
-      400
-    );
+    timer = setTimeout(() => (searchItem ? apiCall() : setResultData([])), 500);
 
     return () => {
       clearTimeout(timer);

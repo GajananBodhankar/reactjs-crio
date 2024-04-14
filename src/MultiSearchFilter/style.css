@@ -1,0 +1,28 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.container {
+  display: flex;
+  border: 1px solid black;
+  margin: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 5px 20px;
+}
+
+.container > span {
+  border: 1px solid black;
+  padding: 5px;
+  margin: 0px 4px;
+}
+
+.container input {
+  display: flex;
+  flex-grow: 1;
+  margin: 0px 10px;
+  border: none;
+  outline: none;
+}

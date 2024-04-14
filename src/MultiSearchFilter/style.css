@@ -21,13 +21,8 @@
 }
 
 .container input {
-  display: flex;
   flex-grow: 1;
   margin: 0px 10px;
   border: none;
   outline: none;
-}
-
-.searchResult {
- 
 }

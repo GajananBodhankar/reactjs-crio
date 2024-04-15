@@ -7,13 +7,14 @@
   border: 1px solid black;
   margin: auto;
   flex-direction: row;
-  flex-wrap: wrap;
   border-radius: 14px;
   overflow: hidden;
   padding: 5px 20px;
   position: relative;
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 .container > span {
   border: 1px solid black;
   padding: 5px;
@@ -22,7 +23,12 @@
 
 .container input {
   flex-grow: 1;
+
   margin: 0px 10px;
   border: none;
   outline: none;
+}
+
+.searchResult {
+  position: absolute;
 }

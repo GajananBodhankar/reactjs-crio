@@ -15,8 +15,8 @@ function App() {
   // return <Component />;
   // return <Throattling />;
   // return <ParentComponent />;
-  // return <SearchFilter />;
-  return <MainContainer/>
+  return <SearchFilter />;
+  // return <MainContainer/>
 }
 
 export default App;

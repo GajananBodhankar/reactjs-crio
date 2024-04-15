@@ -34,20 +34,30 @@ function SearchFilter() {
   return (
     <div style={{ position: "relative" }}>
       <div className="container">
-        {data.map((i, j) => (
-          <span>
-            {i.firstName}{" "}
-            <span
-              onClick={() => {
-                let temp = [...data];
-                temp.splice(j, 1);
-                setData(temp);
-              }}
-            >
-              X
-            </span>{" "}
-          </span>
-        ))}
+        <div
+          style={{
+            // maxWidth: "50%",
+            width:"70%",
+            overflow: "scroll",
+            maxHeight: "30px",
+            backgroundColor: "red",
+          }}
+        >
+          {data.map((i, j) => (
+            <span>
+              {i.firstName}{" "}
+              <span
+                onClick={() => {
+                  let temp = [...data];
+                  temp.splice(j, 1);
+                  setData(temp);
+                }}
+              >
+                X
+              </span>{" "}
+            </span>
+          ))}
+        </div>
         <input
           type="text"
           value={searchItem}

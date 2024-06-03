@@ -1,6 +1,6 @@
 import React from "react";
 import StopWatchWithSetTimeout from "./StopWatch/StopWatchWithSetTimeout.tsx";
-import Index from "./StopWatch/Index.tsx";
+// import Index from "./StopWatch/Index.tsx";
 import ParentComponent from "./forwardRef/ParentComponent.tsx";
 import Component from "./CustomDebouncing/Component.tsx";
 import Throattling from "./CustomThroattling/Throattling.tsx";

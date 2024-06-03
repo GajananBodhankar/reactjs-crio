@@ -6,7 +6,7 @@ import Component from "./CustomDebouncing/Component.tsx";
 import Throattling from "./CustomThroattling/Throattling.tsx";
 import SearchFilter from "./MultiSearchFilter/SearchFilter.tsx";
 import MainContainer from "./Modal/MainContainer.tsx";
-import Index from "./StaleState/Index.tsx";
+// import Index from "./StaleState/Index.tsx";
 
 function App() {
   // return <StopWatchWithSetTimeout />;

@@ -4,54 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      .container {
-        height: 500px;
-        width: 500px;
-        margin: auto;
-        border: 1px solid black;
-        display: flex;
-        flex-direction: column;
-      }
-      .red {
-        border: 2px solid red;
-        height: 100px;
-        width: 100px;
-        border-radius: 150px;
-        background-color: red;
-        margin: auto;
-      }
-      .yellow {
-        border: 2px solid yellow;
-        height: 100px;
-        width: 100px;
-        border-radius: 150px;
-        background-color: yellow;
-        margin: auto;
-      }
-      .green {
-        border: 2px solid green;
-        height: 100px;
-        width: 100px;
-        border-radius: 150px;
-        background-color: green;
-        margin: auto;
-      }
-    </style>
   </head>
   <body>
-    <div class="container">
-      <form action="">
-        <label for="name">Enter name :</label>
-        <input type="text" id="name" />
-      </form>
-    </div>
+    <input type="text" />
+    <script>
+      function customDebounce(callback, time) {
+        let timer;
+        return function (...arg) {
+          if (timer) clearTimeout(timer);
+          timer = setTimeout(() => {
+            callback(arg);
+          }, time);
+        };
+      }
+      let x = customDebounce(handleChange, 1000);
+      function handleChange(e) {
+        console.log(e);
+      }
+      document.querySelector("input").addEventListener("input", (e) => {
+        x(e.target.value);
+      });
+    </script>
   </body>
-  <script>
-    let form = document.querySelector("form");
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      console.log(e.target.elements['name'].value);
-    });
-  </script>
 </html>

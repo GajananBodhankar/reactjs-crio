@@ -1,23 +1,22 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React from "react";
+import StopWatchWithSetTimeout from "./StopWatch/StopWatchWithSetTimeout.tsx";
+import Index from "./StopWatch/Index.tsx";
+import ParentComponent from "./forwardRef/ParentComponent.tsx";
+import Component from "./CustomDebouncing/Component.tsx";
+import Throattling from "./CustomThroattling/Throattling.tsx";
+import SearchFilter from "./MultiSearchFilter/SearchFilter.tsx";
+import MainContainer from "./Modal/MainContainer.tsx";
+// import Index from "./StaleState/Index.tsx";
 
 function App() {
-  const [val, setVal] = useState(0);
-  const [bool, setBool] = useState(false);
-  const refer = useRef<HTMLButtonElement>(null);
-  const handleChange = useCallback(() => setVal((prev) => prev + 1), [val]);
-  useEffect(() => {
-    console.log(refer.current == handleChange);
-    refer.current = handleChange;
-  });
-  return (
-    <div>
-      <button onClick={handleChange} ref={refer}>
-        Increment
-      </button>
-      <p>Value is {val}</p>
-      <button onClick={() => setBool((prev) => !prev)}>Change bool</button>
-    </div>
-  );
+  // return <StopWatchWithSetTimeout />;
+  // return <Index />;
+  // return <Index />;
+  // return <Component />;
+  // return <Throattling />;
+  // return <ParentComponent />;
+  return <SearchFilter />;
+  // return <MainContainer/>
 }
 
 export default App;

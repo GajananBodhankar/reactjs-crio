@@ -2,7 +2,7 @@ function createStore(reducer) {
   let state = {};
   let subscribers: any = [];
   let dispatch = (action: any) => {
-    reducer(action);
+    state=reducer(state,action);
     subscribers.forEach((i: () => any) => i());
   };
   let getState = () => {

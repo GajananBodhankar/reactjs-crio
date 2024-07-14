@@ -1,12 +1,26 @@
 import React, { useEffect } from "react";
-import store from "./Reducers";
+import store from "./Reducers.ts";
 
 function CustomRedux() {
-  const data = store.getState();
+  const { counter } = store.getState();
   useEffect(() => {
-    console.log(data);
-  });
-  return <div></div>;
+    store.subscribe(() => {
+      let count = document.getElementById("count");
+      count.innerText = store.getState().counter?.count;
+    });
+  }, []);
+  return (
+    <div>
+      <button
+        onClick={() => {
+          store.dispatch({ type: "Increment" });
+        }}
+      >
+        click
+      </button>
+      <p id="count">{counter?.count}</p>
+    </div>
+  );
 }
 
 export default CustomRedux;

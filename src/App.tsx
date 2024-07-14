@@ -6,6 +6,7 @@ import Component from "./CustomDebouncing/Component.tsx";
 import Throattling from "./CustomThroattling/Throattling.tsx";
 import SearchFilter from "./MultiSearchFilter/SearchFilter.tsx";
 import MainContainer from "./Modal/MainContainer.tsx";
+import CustomRedux from "./CustomRedux/CustomRedux.tsx";
 // import Index from "./StaleState/Index.tsx";
 
 function App() {
@@ -15,8 +16,10 @@ function App() {
   // return <Component />;
   // return <Throattling />;
   // return <ParentComponent />;
-  return <SearchFilter />;
+  // return <SearchFilter />;
   // return <MainContainer/>
+
+  return <CustomRedux/>
 }
 
 export default App;

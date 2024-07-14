@@ -1,4 +1,4 @@
-import createStore from "./store";
+import createStore from "./store.ts";
 
 function reducerCount(state = { count: 0 }, action) {
   switch (action.type) {
@@ -10,7 +10,10 @@ function reducerCount(state = { count: 0 }, action) {
 }
 
 function handleMode(state = { isDarkMode: false }, action) {
-  return { isDarkMode: !state.isDarkMode };
+  switch (action.type) {
+    case "Mode":
+      return { isDarkMode: !state.isDarkMode };
+  }
 }
 
 function combineReducers(reducers) {
@@ -20,9 +23,10 @@ function combineReducers(reducers) {
 
   function combine(state = initialState, action) {
     let newState = { ...state };
-    Object.entries(reducers).forEach(([id, reducer]) => {
+    Object.entries(reducers).forEach(([id, reducer]: any) => {
       newState[id] = reducer(newState[id], action);
     });
+
     return newState;
   }
   return combine;
